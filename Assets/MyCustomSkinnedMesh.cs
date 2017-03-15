@@ -120,29 +120,122 @@ public class MyCustomSkinnedMesh : MonoBehaviour {
             bones[2].worldToLocalMatrix*transform.localToWorldMatrix,
             bones[3].worldToLocalMatrix*transform.localToWorldMatrix,
             bones[4].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[5].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[6].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[7].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[8].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[9].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[10].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[11].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[12].worldToLocalMatrix*transform.localToWorldMatrix,
+            bones[13].worldToLocalMatrix*transform.localToWorldMatrix,
+            
+
         };//위치를 잡아줌
 
         //버텍스와 웨이트를 칠함//////
         m.boneWeights = new BoneWeight[]
         {
-             new BoneWeight() { boneIndex0=0,weight0=0f },//묶여있는 본 
-             new BoneWeight() {boneIndex0=0,weight1=0f },
-             new BoneWeight() {boneIndex0=0,weight1=0f },
-              new BoneWeight() { boneIndex0=1,weight0=1f }, 
-             new BoneWeight() {boneIndex0=0,weight1=0f },//4
+             new BoneWeight() {boneIndex0=0,weight0=1f },//묶여있는 본 
+             new BoneWeight() {boneIndex0=1,weight0=1f },
+             new BoneWeight() {boneIndex0=2,weight0=1f },
+             new BoneWeight() {boneIndex0=0,weight0=0f }, 
+             new BoneWeight() {boneIndex0=0,weight0=0f },//4
 
-             new BoneWeight() {boneIndex0=0,weight1=0f },
-              new BoneWeight() { boneIndex0=0,weight0=0f },
-             new BoneWeight() {boneIndex0=0,weight1=0f },
-             new BoneWeight() {boneIndex0=0,weight1=0f },//8
+             new BoneWeight() {boneIndex0=0,weight0=0f },
+             new BoneWeight() {boneIndex0=0,weight0=0f },
+             new BoneWeight() {boneIndex0=0,weight0=0f },
+             new BoneWeight() {boneIndex0=0,weight0=0f },//8
 
-              new BoneWeight() { boneIndex0=0,weight0=0f },
-             new BoneWeight() {boneIndex0=0,weight1=0f },
-             new BoneWeight() {boneIndex0=0,weight1=0f },
-              new BoneWeight() { boneIndex0=0,weight0=0f },
-             new BoneWeight() {boneIndex0=0,weight1=0f },
-             new BoneWeight() {boneIndex0=0,weight1=0f }//14
+             new BoneWeight() {boneIndex0=4,weight0=1f },
+             new BoneWeight() {boneIndex0=4,weight0=1f },
+             new BoneWeight(){boneIndex0=4,weight0=1f },
+             new BoneWeight() {boneIndex0=4,weight0=1f },
+             new BoneWeight() {boneIndex0=4,weight0=1f },
+             new BoneWeight() {boneIndex0=4,weight0=1f },//14
+
+             new BoneWeight() { boneIndex0=11,weight0=1f },
+             new BoneWeight() {boneIndex0=11,weight0=1f },
+             new BoneWeight() {boneIndex0=11,weight0=1f },
+             new BoneWeight() {boneIndex0=11,weight0=1f },
+             new BoneWeight() {boneIndex0=11,weight0=1f },
+             new BoneWeight() {boneIndex0=11,weight0=1f },//20
+
+             new BoneWeight() {boneIndex0=11,weight0=1f },
+             new BoneWeight() {boneIndex0=11,weight0=1f },
+             new BoneWeight() {boneIndex0=11,weight0=1f },
+             new BoneWeight() { boneIndex0=5,weight0=0.5f,boneIndex1=1,weight1=0.5f },//
+             new BoneWeight() {boneIndex0=5,weight0=1f },
+             new BoneWeight() {boneIndex0=6,weight0=1f },//26
+
+            new BoneWeight() { boneIndex0=6,weight0=1f,boneIndex1=2,weight1=0.5f },//
+             new BoneWeight() {boneIndex0=8,weight0=1f },
+             new BoneWeight() {boneIndex0=8,weight0=1f },
+             new BoneWeight() { boneIndex0=7,weight0=1f },
+             new BoneWeight() {boneIndex0=7,weight0=1f },
+             new BoneWeight() {boneIndex0=8,weight0=1f },//32
+
+             new BoneWeight() { boneIndex0=8,weight0=1f },
+             new BoneWeight() {boneIndex0=10,weight0=1f },
+             new BoneWeight() {boneIndex0=10,weight0=1f },
+             new BoneWeight() { boneIndex0=7,weight0=1f },
+             new BoneWeight() {boneIndex0=7,weight0=1f },
+             new BoneWeight() {boneIndex0=9,weight0=1f },
+             new BoneWeight() {boneIndex0=9,weight0=1f }//39
         };
+
+
+        Color yRed=new Color(0.85f, 0.13f,0.0f);
+        Color newC0 = new Color(0.45f, 0.13f, 0.6f);
+        m.colors = new Color[]
+        {
+
+          Color.blue, //0
+          Color.yellow,
+          Color.yellow,
+          Color.yellow,
+          Color.yellow,
+          yRed,
+          yRed,
+          yRed,
+          yRed,
+          Color.yellow,
+          
+          Color.yellow,//10
+          Color.blue,
+          Color.blue,
+          Color.blue,
+          Color.blue,
+          Color.red,
+          Color.grey,
+          Color.grey,
+          Color.red,
+          Color.red,
+          
+          Color.green,//20
+          Color.green,
+          Color.green,
+          Color.green,
+          Color.blue,
+          Color.black,
+          Color.black,
+          Color.black,
+          Color.black,
+          Color.black,
+
+          Color.black,//30
+          Color.black,
+          Color.black,
+          Color.black,
+          newC0,
+          newC0,
+          Color.black,
+          Color.black,
+          newC0,
+          newC0
+
+        };
+
         //우리가 만든 매쉬가 들어감
         SkinnedMeshRenderer smr = GetComponent<SkinnedMeshRenderer>();
         smr.sharedMesh = m;

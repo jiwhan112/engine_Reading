@@ -31,9 +31,10 @@ public class CustomSkinnedMesh : MonoBehaviour {
         //버텍스와 웨이트를 칠함
         m.boneWeights = new BoneWeight[]
         {
-             new BoneWeight() { boneIndex0=0,weight0=1f },//묶여있는 본 
-             new BoneWeight() {boneIndex0=1,weight1=1f },
-             new BoneWeight() {boneIndex0=0,weight1=1f }
+             new BoneWeight() {boneIndex0=0,weight0=1f },// 1버텍스 //움지이지 않음
+             new BoneWeight() {boneIndex0=1,weight0=1f },
+             new BoneWeight() {boneIndex0=1,weight0=1f }
+
         };
         //우리가 만든 매쉬가 들어감
         SkinnedMeshRenderer smr = GetComponent<SkinnedMeshRenderer>();
